@@ -1,34 +1,47 @@
 function calculateBMI() {
-  const heightInput = document.getElementById("height");
+  const heigtInput = document.getElementById("height");
   const weightInput = document.getElementById("weight");
-  const resultDiv = document.getElementById("result");
+  const munculDiv = document.getElementById("muncul");
 
-  const height = parseFloat(heightInput.value);
+  // konversi ke data type float
+  const height = parseFloat(heigtInput.value);
   const weight = parseFloat(weightInput.value);
 
   if (isNaN(height) || isNaN(weight)) {
-    resultDiv.innerHTML = "Please enter valid height and weight.";
+    munculDiv.innerHTML = `<div class="container">Please enter valid height & weight.</div>`;
     return;
   }
 
   const bmi = weight / (height / 100) ** 2;
   let category = "";
+  let explaination = "";
 
   if (bmi < 18.5) {
     category = "Underweight";
+    explaination =
+      "Penting untuk meningkatkan asupan nutrisi. Coba konsumsi makanan yang kaya protein, karbohidrat, dan lemak sehat. Jangan lupa untuk berolahraga secara teratur agar tubuhmu tetap sehat.";
   } else if (bmi < 25) {
     category = "Normal Weight";
+    explaination =
+      "Kamu sudah berada pada berat badan yang sehat! Pertahankan pola makan seimbang dan tetap aktif bergerak. Ingat untuk menjaga kesehatan dengan rutin memeriksakan diri.";
   } else if (bmi < 30) {
     category = "Overweight";
+    explaination =
+      "Pertimbangkan untuk mengurangi asupan kalori dan meningkatkan aktivitas fisik. Olahraga seperti berjalan kaki, bersepeda, atau berenang dapat membantu.";
   } else {
     category = "Obese";
+    explaination = `Obesitas dapat meningkatkan risiko penyakit jantung, diabetes, dan masalah kesehatan lainnya. Pertimbangkan untuk berkonsultasi dengan dokter atau ahli gizi. Fokus pada pola makan sehat dan olahraga teratur.`;
   }
 
-  resultDiv.innerHTML = `Your BMI is ${bmi.toFixed(2)} (${category})`;
+  munculDiv.innerHTML = `<div class="container">
+      <div id="result">Your BMI is ${bmi.toFixed(2)} (${category})</div>
+      <div id="explaination">Jika kamu masuk dalam kategori ini maka: </div>
+      <p>${explaination}</p>
+    </div>`;
 }
 
 function clearFields() {
   document.getElementById("height").value = "";
   document.getElementById("weight").value = "";
-  document.getElementById("result").innerHTML = "";
+  document.getElementById("muncul").innerHTML = "";
 }
