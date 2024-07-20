@@ -78,6 +78,14 @@ button:hover {
   background-color: #49ca4d;
 }
 
+button[onclick="clearFields()"] {
+  background-color: crimson;
+}
+
+button[onclick="clearFields()"]:hover {
+  background-color: #ff1140;
+}
+
 #result {
   margin: 15px 0 15px 0;
   font-weight: bold;
