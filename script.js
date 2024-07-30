@@ -1,14 +1,14 @@
 function calculateBMI() {
   const heigtInput = document.getElementById("height");
   const weightInput = document.getElementById("weight");
-  const munculDiv = document.getElementById("muncul");
+  const showResultDiv = document.getElementById("show-result");
 
   // konversi ke data type float
   const height = parseFloat(heigtInput.value);
   const weight = parseFloat(weightInput.value);
 
   if (isNaN(height) || isNaN(weight)) {
-    munculDiv.innerHTML = `<div class="container">Please enter valid height & weight.</div>`;
+    showResultDiv.innerHTML = `<div class="container">Please enter valid height & weight.</div>`;
     return;
   }
 
@@ -33,7 +33,7 @@ function calculateBMI() {
     explaination = `Obesitas dapat meningkatkan risiko penyakit jantung, diabetes, dan masalah kesehatan lainnya. Pertimbangkan untuk berkonsultasi dengan dokter atau ahli gizi. Fokus pada pola makan sehat dan olahraga teratur.`;
   }
 
-  munculDiv.innerHTML = `<div class="container">
+  showResultDiv.innerHTML = `<div class="container">
       <div id="result">Your BMI is ${bmi.toFixed(2)} (${category})</div>
       <div id="explaination">Jika kamu masuk dalam kategori ini maka: </div>
       <p>${explaination}</p>
@@ -43,5 +43,5 @@ function calculateBMI() {
 function clearFields() {
   document.getElementById("height").value = "";
   document.getElementById("weight").value = "";
-  document.getElementById("muncul").innerHTML = "";
+  document.getElementById("show-result").innerHTML = "";
 }
