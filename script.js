@@ -1,6 +1,14 @@
+// add event listener on input field
+const heigtInput = document.getElementById("height");
+const weightInput = document.getElementById("weight");
+weightInput.addEventListener("keydown", function (event) {
+  // call the calculateBMI() function if the Enter key is pressed
+  if (event.key === "Enter") {
+    calculateBMI();
+  }
+});
+
 function calculateBMI() {
-  const heigtInput = document.getElementById("height");
-  const weightInput = document.getElementById("weight");
   const showResultDiv = document.getElementById("show-result");
 
   // konversi ke data type float
@@ -8,7 +16,7 @@ function calculateBMI() {
   const weight = parseFloat(weightInput.value);
 
   if (isNaN(height) || isNaN(weight)) {
-    showResultDiv.innerHTML = `<div class="container">Please enter valid height & weight.</div>`;
+    showResultDiv.innerHTML = `<div class="container">Please enter a valid height & weight.</div>`;
     return;
   }
 
