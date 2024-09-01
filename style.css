@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .container {
@@ -59,6 +59,19 @@ input[type="number"] {
   border-radius: 5px;
   box-sizing: border-box;
   margin-top: 10px;
+  font-size: 15px;
+  outline-color: orange;
+}
+
+input[type="number"]:hover {
+  border-color: orange;
+}
+
+/* Remove Arrows/Spinners for Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 button {
