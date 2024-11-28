@@ -1,8 +1,9 @@
 // add event listener on input field
 const heigtInput = document.getElementById("height");
 const weightInput = document.getElementById("weight");
+
+// call the calculateBMI() function if the Enter key is pressed
 weightInput.addEventListener("keydown", function (event) {
-  // call the calculateBMI() function if the Enter key is pressed
   if (event.key === "Enter") {
     calculateBMI();
   }
