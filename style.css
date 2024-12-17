@@ -67,7 +67,7 @@ input[type="number"]:hover {
   border-color: orange;
 }
 
-/* Remove Arrows/Spinners for Chrome, Safari, Edge, Opera */
+/* Remove Arrows/Spinners for Chorme, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -92,11 +92,11 @@ button:hover {
 }
 
 button[onclick="clearFields()"] {
-  background-color: crimson;
+  background-color: #f23030;
 }
 
 button[onclick="clearFields()"]:hover {
-  background-color: #ff1140;
+  background-color: #ff4f4f;
 }
 
 #result {
@@ -137,7 +137,7 @@ button[onclick="clearFields()"]:hover {
     font-size: 17px;
   }
 
-  #explanation {
+  #explaination {
     font-size: 15px;
   }
 }
