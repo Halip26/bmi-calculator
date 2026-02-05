@@ -22,7 +22,7 @@ h1 {
 
 h1 a {
   text-decoration: none;
-  color: crimson;
+  color: #dc143c;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -111,7 +111,7 @@ button[onclick="clearFields()"]:hover {
 }
 
 /* Responsive web design */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 394px) {
   .container {
     max-width: 280px;
   }
