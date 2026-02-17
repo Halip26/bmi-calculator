@@ -1,5 +1,5 @@
 // add event listener on input field
-const heigtInput = document.getElementById("height");
+const heightInput = document.getElementById("height");
 const weightInput = document.getElementById("weight");
 
 // call the calculateBMI() function if the Enter key is pressed
@@ -13,7 +13,7 @@ function calculateBMI() {
   const showResultDiv = document.getElementById("show-result");
 
   // konversi ke data type float
-  const height = parseFloat(heigtInput.value);
+  const height = parseFloat(heightInput.value);
   const weight = parseFloat(weightInput.value);
 
   if (isNaN(height) || isNaN(weight)) {
